@@ -1,24 +1,29 @@
 Multi-Portfolio Backtest Framework
 A comprehensive backtesting system that allows comparison of multiple stock portfolios against a benchmark. This framework calculates extensive performance metrics, conducts sector analysis, visualizes results, and analyzes portfolio overlaps.
 <img width="713" alt="image" src="https://github.com/user-attachments/assets/479cbc0b-41fb-432c-bca2-9c03439e5192" />
-
-Show Image
 Features
 
 Multi-Portfolio Analysis: Compare up to three different portfolios against a benchmark
+<img width="371" alt="image" src="https://github.com/user-attachments/assets/050a6ce5-f7fb-43db-8dc7-633e2a77765c" />
 Comprehensive Metrics: Calculate 25+ risk and performance metrics including Sharpe, Sortino, Alpha, Beta, etc.
+<img width="398" alt="image" src="https://github.com/user-attachments/assets/9f6d1731-6507-4010-9957-eb7644610dac" />
 Sector Analysis: Analyze sector weightings and compare across portfolios
+<img width="354" alt="image" src="https://github.com/user-attachments/assets/ef63245b-d21e-4573-89ec-01a321a27ed4" />
 Advanced Visualization: Generate performance charts, drawdown analysis, and monthly return heatmaps
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/a964dbab-90f5-4d84-a165-3ddc455ede3a" />
+<img width="721" alt="image" src="https://github.com/user-attachments/assets/b72d9f31-11e2-4126-a43d-9548bc4aefc0" />
+<img width="546" alt="image" src="https://github.com/user-attachments/assets/ea7f8894-b3a6-4384-b78d-4e83394bd2ad" />
 Portfolio Overlap: Quantify the overlap between different portfolios
+<img width="358" alt="image" src="https://github.com/user-attachments/assets/b9cf69c7-c59e-409f-be34-96ce1ffec3e6" />
+
 
 Installation
 bashCopypip install pandas numpy matplotlib seaborn requests plotly yfinance scipy tabulate statsmodels IPython
+
 API Requirements
 The code uses the following APIs (API keys needed):
-
 Financial Modeling Prep (FMP)
 Alpha Vantage
-Anthropic (optional - not used in core functionality)
 
 Usage
 Basic Usage
@@ -47,7 +52,6 @@ download_price_data(): Downloads historical price data for all tickers
 get_sector_data(): Retrieves sector information for tickers using multiple data sources
 
 Performance Calculation Functions
-
 calculate_returns(): Computes daily returns from price data
 calculate_portfolio_returns(): Calculates weighted portfolio returns
 calculate_cumulative_returns(): Computes cumulative returns
@@ -55,12 +59,10 @@ calculate_drawdowns(): Measures portfolio drawdowns
 calculate_risk_metrics(): Generates comprehensive performance metrics
 
 Analysis Functions
-
 calculate_sector_weights(): Analyzes sector weightings
 create_sector_weights_table(): Creates a comparison table of sector weights
 
 Visualization Functions
-
 create_combined_metrics_table(): Generates performance comparison tables
 create_performance_charts(): Creates visualizations including:
 
@@ -68,50 +70,6 @@ Cumulative returns chart
 Drawdown analysis
 Monthly return heatmaps
 Risk-return scatter plot
-
-
-
-Sample Output
-The framework generates extensive output including:
-
-Detailed performance metrics tables
-Sector weight analysis
-Performance visualizations
-Portfolio overlap statistics
-
-Metrics Calculated
-Return Metrics
-
-Total Return
-Annualized Return
-Win Rate
-
-Risk Metrics
-
-Annualized Volatility
-Maximum Drawdown
-Average Drawdown
-Average Recovery Time
-Value at Risk (VaR)
-Conditional VaR (CVaR)
-Skewness
-Kurtosis
-
-Risk-Adjusted Metrics
-
-Sharpe Ratio
-Sortino Ratio
-Calmar Ratio
-Treynor Ratio
-Omega Ratio
-
-Relative Performance Metrics
-
-Alpha
-Beta
-Information Ratio
-Tracking Error
-Upside/Downside Capture Ratios
 
 Limitations
 
