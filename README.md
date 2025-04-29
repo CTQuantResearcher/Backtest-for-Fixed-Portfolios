@@ -41,7 +41,7 @@ Alpha Vantage
 # Default: Run a 15-year backtest
 You can change the timedelta to run any year at a time, currently it is set to "15", it could be 5 or 1 or 30, it will only run stocks for data it has for
 
-# Main execution
+Main execution
 if __name__ == "__main__":
     print("Starting comprehensive portfolio backtest...")
     
