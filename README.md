@@ -1,9 +1,9 @@
-Multi-Portfolio Backtest Framework
+# Multi-Portfolio Backtest Framework
 A comprehensive backtesting system that allows comparison of multiple stock portfolios against a benchmark. This framework calculates extensive performance metrics, conducts sector analysis, visualizes results, and analyzes portfolio overlaps.
 
 <img width="713" alt="image" src="https://github.com/user-attachments/assets/479cbc0b-41fb-432c-bca2-9c03439e5192" />
 
-Features
+# Features
 
 Multi-Portfolio Analysis: Compare up to three different portfolios against a benchmark
 
@@ -30,17 +30,13 @@ Portfolio Overlap: Quantify the overlap between different portfolios
 <img width="358" alt="image" src="https://github.com/user-attachments/assets/b9cf69c7-c59e-409f-be34-96ce1ffec3e6" />
 
 
-Installation
+# Installation
 bashCopypip install pandas numpy matplotlib seaborn requests plotly yfinance scipy tabulate statsmodels IPython
 
-API Requirements
+# API Requirements
 The code uses the following APIs (API keys needed):
 Financial Modeling Prep (FMP)
 Alpha Vantage
-
-Usage
-Basic Usage
-pythonCopyfrom portfolio_backtest import run_backtest
 
 # Default: Run a 15-year backtest
 You can change the timedelta to run any year at a time, currently it is set to "15", it could be 5 or 1 or 30, it will only run stocks for data it has for
@@ -55,12 +51,7 @@ if __name__ == "__main__":
     print("Backtest completed successfully!")
 
 
-# Specify custom date range
-from datetime import datetime, timedelta
-start_date = (datetime.now() - timedelta(days=5*365)).strftime('%Y-%m-%d')
-end_date = datetime.now().strftime('%Y-%m-%d')
-results = run_backtest(start_date=start_date, end_date=end_date)
-Configuring Portfolios
+# Specify custom portfolios
 The code comes with three pre-configured portfolios:
 
 Portfolio 1: 140 equally-weighted stocks
@@ -68,8 +59,8 @@ Portfolio 2: 81 equally-weighted stocks
 Portfolio 3: 29 stocks with custom weights
 
 You can modify these portfolios by editing the portfolio1_tickers, portfolio2_tickers, and portfolio3_tickers variables along with the portfolio3_weights.
-Core Components
-Data Acquisition Functions
+
+# Explanations
 
 download_price_data(): Downloads historical price data for all tickers
 get_sector_data(): Retrieves sector information for tickers using multiple data sources
@@ -94,14 +85,14 @@ Drawdown analysis
 Monthly return heatmaps
 Risk-return scatter plot
 
-Limitations
+# Limitations
 
 API rate limits may restrict sector data retrieval for large portfolios
 Historical data availability may vary by ticker
 Survivorship bias is not addressed (only analyzes stocks that exist today)
 No transaction costs or slippage modeling
 
-Dependencies
+# Dependencies
 
 pandas: Data manipulation and analysis
 numpy: Numerical computations
