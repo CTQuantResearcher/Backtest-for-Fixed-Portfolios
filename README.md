@@ -43,7 +43,17 @@ Basic Usage
 pythonCopyfrom portfolio_backtest import run_backtest
 
 # Default: Run a 15-year backtest
-results = run_backtest()
+You can change the timedelta to run any year at a time, currently it is set to "15", it could be 5 or 1 or 30, it will only run stocks for data it has for
+
+# Main execution
+if __name__ == "__main__":
+    print("Starting comprehensive portfolio backtest...")
+    
+    # Run the backtest with a 3-year lookback (explicitly set)
+    result = run_backtest(start_date=(datetime.now() - timedelta(days=15*365)).strftime('%Y-%m-%d'))
+    
+    print("Backtest completed successfully!")
+
 
 # Specify custom date range
 from datetime import datetime, timedelta
